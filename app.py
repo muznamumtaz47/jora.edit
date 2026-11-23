@@ -51,9 +51,8 @@ SHIPPING_CHARGES = 300
 PRODUCT_CATALOG = {
     "GULRUKH": 8490,
     "RAQS": 17490,
-    "DESIGN 01": 8490
+    "ANDAAZ": 9890
 }
-
 ALLOWED_PAYMENT_METHODS = [
     "Bank Transfer",
     "NayaPay Personal Transfer"
