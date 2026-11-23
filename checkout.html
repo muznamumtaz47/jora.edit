@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | JORA.EDIT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="announcement">
+        ROOTED IN TRADITION, MADE FOR TODAY.
+    </div>
+
+    <header class="navbar">
+
+    <a href="index.html#home" class="logo">JORA<span>.</span>EDIT</a>
+
+    <nav class="nav-left" id="navLeft">
+        <a href="index.html#home">HOME</a>
+
+        <div class="dropdown">
+            <button
+                type="button"
+                class="dropdown-toggle"
+                id="collectionsToggle"
+                aria-expanded="false">
+                COLLECTIONS
+            </button>
+
+            <div class="dropdown-menu" id="collectionsMenu">
+                <a href="collections.html#shop-all">SHOP ALL</a>
+                <a href="gota-guldasta.html">GOTA GULDASTA</a>
+                <a href="aks-e-husn.html">AKS-E-HUSN</a>
+            </div>
+        </div>
+
+        <a href="index.html#story">OUR STORY</a>
+    </nav>
+
+    <div class="nav-right">
+        <a href="cart.html" class="bag-link">
+            BAG (<span id="bagCount">0</span>)
+        </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        type="button">
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+    <main class="checkout-page">
+
+        <div class="cart-heading">
+            <p>ALMOST YOURS</p>
+            <h1>CHECKOUT</h1>
+            <span>Complete your details to place your order.</span>
+        </div>
+
+
+        <div class="checkout-navigation">
+            <a href="cart.html">← BACK TO BAG</a>
+            <a href="collections.html">CONTINUE SHOPPING →</a>
+        </div>
+
+
+        <div class="checkout-layout">
+
+            <!-- DELIVERY INFORMATION -->
+
+            <section class="checkout-form-section">
+
+                <h2>DELIVERY INFORMATION</h2>
+
+                <form id="checkoutForm" enctype="multipart/form-data">
+
+                    <label for="customerName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+
+                    <label for="customerPhone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        name="phone"
+                        placeholder="03XXXXXXXXX"
+                        autocomplete="tel"
+                        required
+                    >
+
+
+                    <label for="customerEmail">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+
+
+                    <label for="customerCity">City</label>
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        name="city"
+                        placeholder="Your city"
+                        required
+                    >
+
+
+                    <label for="customerAddress">Complete Delivery Address</label>
+
+                    <textarea
+                        id="customerAddress"
+                        name="address"
+                        placeholder="House number, street, area..."
+                        rows="4"
+                        required
+                    ></textarea>
+
+
+                    <!-- PAYMENT PREFERENCE -->
+
+                    <h2 class="payment-heading">
+                        PAYMENT PREFERENCE
+                    </h2>
+
+                    <p class="product-detail-text">
+                        A minimum 50% advance payment is required.
+                        You can also choose to pay the full amount
+                        in advance.
+                    </p>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentPreference"
+                            value="50% Advance"
+                            required
+                        >
+
+                        <span>
+                            <strong>50% Advance Payment</strong>
+
+                            <small>
+                                Pay 50% now and the remaining balance
+                                at delivery.
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentPreference"
+                            value="Full Payment"
+                        >
+
+                        <span>
+                            <strong>100% Full Payment</strong>
+
+                            <small>
+                                Pay your complete order amount in advance.
+                                No payment will be due at delivery.
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                    <!-- PAYMENT METHOD -->
+
+                    <h2 class="payment-heading">
+                        PAYMENT METHOD
+                    </h2>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Bank Transfer"
+                            required
+                        >
+
+                        <span>
+                            <strong>Direct Bank Transfer (MCB)</strong>
+
+                            <small>
+                                Transfer through your bank account.
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="NayaPay Personal Transfer"
+                        >
+
+                        <span>
+                            <strong>NayaPay Personal Transfer</strong>
+
+                            <small>
+                                Transfer through NayaPay.
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                    <!-- PAYMENT INSTRUCTIONS -->
+
+                    <div class="payment-notice">
+
+                        <p>
+                            <strong>PAYMENT INSTRUCTIONS</strong>
+                        </p>
+
+                        <p id="paymentInstructions">
+                            Select your payment method to view
+                            the payment instructions.
+                        </p>
+
+                        <p id="paymentAccountDetails"></p>
+
+                    </div>
+
+
+                    <!-- TRANSACTION DETAILS -->
+
+                    <h2 class="payment-heading">
+                        PAYMENT CONFIRMATION
+                    </h2>
+
+                    <p class="product-detail-text">
+                        After transferring the payment, provide
+                        your transaction details below.
+                    </p>
+
+
+                    <label for="transactionId">
+                        Transaction ID / Reference Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="transactionId"
+                        name="transaction_id"
+                        placeholder="Enter your transaction ID"
+                        maxlength="100"
+                        required
+                    >
+
+
+                    <label for="paymentScreenshot">
+                        Upload Payment Screenshot
+                    </label>
+
+                    <input
+                        type="file"
+                        id="paymentScreenshot"
+                        name="payment_screenshot"
+                        accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+                        required
+                    >
+
+                    <p class="product-note">
+                        Accepted formats: JPG, PNG and WEBP.
+                        Maximum file size: 5 MB.
+                    </p>
+
+
+                    <div class="payment-notice">
+
+                        <p>
+                            <strong>PLEASE NOTE</strong>
+                        </p>
+
+                        <p>
+                            Your order will remain pending until
+                            your advance or full payment has been
+                            manually verified by JORA.EDIT.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="order-button"
+                    >
+                        PLACE MY ORDER ↗
+                    </button>
+
+                    <p class="product-note">
+                        By placing your order, you agree to our
+                        payment and delivery policy.
+                    </p>
+
+                </form>
+
+            </section>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="checkout-summary">
+
+                <h2>YOUR ORDER</h2>
+
+                <div id="checkoutItems"></div>
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+
+                    <span id="checkoutSubtotal">
+                        Calculating...
+                    </span>
+                </div>
+
+
+                <div class="summary-line">
+                    <span>Shipping</span>
+
+                    <span id="checkoutShipping">
+                        PKR 300
+                    </span>
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-line">
+                    <strong>Total Order Amount</strong>
+
+                    <strong id="checkoutTotal">
+                        Calculating...
+                    </strong>
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-line">
+
+                    <span id="checkoutAdvanceLabel">
+                        Pay Now
+                    </span>
+
+                    <strong id="checkoutAdvance">
+                        Calculating...
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>Remaining on Delivery</span>
+
+                    <strong id="checkoutRemaining">
+                        Calculating...
+                    </strong>
+
+                </div>
+
+
+                <p class="product-note">
+                    For 50% advance orders, the remaining
+                    balance and shipping charges are payable
+                    at delivery.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>JORA.EDIT</h2>
+
+        <p>For every mood, moment & mehfil.</p>
+
+        <div class="footer-navigation">
+
+            <a href="index.html">HOME</a>
+
+            <a href="collections.html">COLLECTIONS</a>
+
+            <a href="cart.html">SHOPPING BAG</a>
+
+        </div>
+
+        <p>© 2026 JORA.EDIT</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAQS | JORA.EDIT</title>
+
+    <meta name="description" content="Discover RAQS, an elegant pure cotton silk kalidaar frock by JORA.EDIT.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement">
+        ROOTED IN TRADITION, MADE FOR TODAY.
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+    <a href="index.html#home" class="logo">JORA<span>.</span>EDIT</a>
+
+    <nav class="nav-left" id="navLeft">
+        <a href="index.html#home">HOME</a>
+
+        <div class="dropdown">
+            <button
+                type="button"
+                class="dropdown-toggle"
+                id="collectionsToggle"
+                aria-expanded="false">
+                COLLECTIONS
+            </button>
+
+            <div class="dropdown-menu" id="collectionsMenu">
+                <a href="collections.html#shop-all">SHOP ALL</a>
+                <a href="gota-guldasta.html">GOTA GULDASTA</a>
+                <a href="aks-e-husn.html">AKS-E-HUSN</a>
+            </div>
+        </div>
+
+        <a href="index.html#story">OUR STORY</a>
+    </nav>
+
+    <div class="nav-right">
+        <a href="cart.html" class="bag-link" id="bagLink">
+            BAG (<span id="bagCount">0</span>)
+        </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        type="button">
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+    <!-- Product Navigation -->
+    <div class="product-page-navigation">
+        <a href="index.html">← HOME</a>
+        <a href="collections.html">ALL COLLECTIONS</a>
+    </div>
+
+
+    <!-- Product Section -->
+    <main class="product-page">
+
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+
+            <div class="main-image">
+                <img
+                    id="mainProductImage"
+                    src="images/product-2-full.jpeg"
+                    alt="RAQS by JORA.EDIT"
+                    style="display:block; width:100%; height:auto; object-fit:cover;"
+                >
+            </div>
+
+            <div class="product-thumbnails">
+
+                <img
+                    src="images/product-2-full.jpeg"
+                    alt="RAQS Full Look"
+                    class="thumbnail active"
+                    onclick="changeImage(this)"
+                >
+
+                <img
+                    src="images/product-2-front.jpeg"
+                    alt="RAQS Front View"
+                    class="thumbnail"
+                    onclick="changeImage(this)"
+                >
+
+                <img
+                    src="images/product-2-back.jpeg"
+                    alt="RAQS Back View"
+                    class="thumbnail"
+                    onclick="changeImage(this)"
+                >
+
+                <img
+                    src="images/product-2-details.jpeg"
+                    alt="RAQS Fabric Details"
+                    class="thumbnail"
+                    onclick="changeImage(this)"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Product Information -->
+        <section class="product-info">
+
+            <p class="product-category">
+                GOTA GULDASTA / RAQS
+            </p>
+
+            <h1>RAQS</h1>
+
+            <p class="product-description">
+                A beautifully flowing kalidaar frock crafted in
+                pure cotton silk, featuring an elegant silhouette
+                that brings together traditional charm and
+                contemporary sophistication. Designed to make
+                every occasion feel special.
+            </p>
+
+            <div class="product-divider"></div>
+
+
+            <!-- Price -->
+            <h3>PRICE</h3>
+
+            <p class="product-price">
+                PKR 17,490
+            </p>
+
+
+            <!-- Fabric -->
+            <h3>FABRIC & DETAILS</h3>
+
+            <ul class="product-features">
+                <li>Pure Cotton Silk</li>
+                <li>Elegant Kalidaar Frock</li>
+                <li>Flowing Flared Silhouette</li>
+            </ul>
+
+
+            <!-- Sizes -->
+            <h3>AVAILABLE SIZES</h3>
+
+            <div class="size-options">
+
+                <button type="button">XS</button>
+                <button type="button">S</button>
+                <button type="button">M</button>
+                <button type="button">L</button>
+                <button type="button">XL</button>
+
+            </div>
+<button type="button" class="size-chart-link" onclick="openSizeChart('raqs')">
+     SIZE CHART
+</button>
+            <p id="selectedSize">
+                Please select your size.
+            </p>
+
+
+            <!-- Model Information -->
+           <h3>MODEL DETAILS</h3>
+
+<p class="product-detail-text">
+    Height: 5'4" <br>
+    Wearing Size: Small
+</p>
+
+
+            <div class="product-divider"></div>
+
+
+            <!-- Add to Bag -->
+            <button
+                type="button"
+                id="addToCartButton"
+                class="order-button"
+            >
+                ADD TO BAG ↗
+            </button>
+
+            <p class="product-note">
+    For availability and order enquiries,
+    get in touch with JORA.EDIT.
+</p>
+
+            <p class="product-note">
+                Product colour may vary slightly due to studio
+                lighting, photography, and individual screen settings.
+            </p>
+
+            <a href="gota-guldasta.html" class="back-link">
+                ← BACK TO GOTA GULDASTA
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h2>JORA.EDIT</h2>
+
+        <p>For every mood, moment & mehfil.</p>
+
+        <div class="footer-navigation">
+
+            <a href="index.html">HOME</a>
+
+            <a href="collections.html">COLLECTIONS</a>
+
+            <a href="cart.html">SHOPPING BAG</a>
+
+            <a
+                href="https://www.instagram.com/jora.edit/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                INSTAGRAM
+            </a>
+
+        </div>
+
+        <p>© 2026 JORA.EDIT</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+<div class="size-chart-popup" id="sizeChartPopup">
+    <div class="size-chart-content">
+        <button type="button" class="size-chart-close" onclick="closeSizeChart()">×</button>
+        <img id="sizeChartImage" src="" alt="Size Chart">
+    </div>
+</div>
+</body>
+</html>

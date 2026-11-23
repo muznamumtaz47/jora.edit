@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag | JORA.EDIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        ROOTED IN TRADITION, MADE FOR TODAY.
+    </div>
+
+    <header class="navbar">
+
+    <a href="index.html#home" class="logo">JORA<span>.</span>EDIT</a>
+
+    <nav class="nav-left" id="navLeft">
+        <a href="index.html#home">HOME</a>
+
+        <div class="dropdown">
+            <button
+                type="button"
+                class="dropdown-toggle"
+                id="collectionsToggle"
+                aria-expanded="false">
+                COLLECTIONS
+            </button>
+
+            <div class="dropdown-menu" id="collectionsMenu">
+                <a href="collections.html#shop-all">SHOP ALL</a>
+                <a href="gota-guldasta.html">GOTA GULDASTA</a>
+                <a href="aks-e-husn.html">AKS-E-HUSN</a>
+            </div>
+        </div>
+
+        <a href="index.html#story">OUR STORY</a>
+    </nav>
+
+    <div class="nav-right">
+        <a href="cart.html" class="bag-link">
+            BAG (<span id="bagCount">0</span>)
+        </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        type="button">
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+    <main class="cart-page">
+
+        <div class="cart-heading">
+            <p>YOUR SELECTION</p>
+            <h1>THE SHOPPING BAG</h1>
+            <span>A little elegance, ready for you.</span>
+        </div>
+
+        <div class="cart-navigation">
+            <a href="index.html">← BACK TO HOME</a>
+            <a href="collections.html">CONTINUE SHOPPING →</a>
+        </div>
+
+        <div class="cart-layout">
+
+            <section class="cart-products">
+                <div id="cartItems">
+                    <p>Your shopping bag is currently empty.</p>
+                    <a href="collections.html" class="back-link">
+                        EXPLORE THE COLLECTION →
+                    </a>
+                </div>
+            </section>
+
+            <aside class="cart-summary">
+                <h2>ORDER SUMMARY</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cartTotal">Rs. 0</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Delivery</span>
+                    <span>Calculated at checkout</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <button id="checkoutButton" class="order-button">
+                    PROCEED TO CHECKOUT ↗
+                </button>
+
+                <p>Secure ordering experience by JORA.EDIT.</p>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <h2>JORA.EDIT</h2>
+        <p>For every mood, moment & mehfil.</p>
+
+        <div class="footer-navigation">
+            <a href="index.html">HOME</a>
+            <a href="collections.html">COLLECTIONS</a>
+            <a href="cart.html">SHOPPING BAG</a>
+        </div>
+
+        <p>© 2026 JORA.EDIT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

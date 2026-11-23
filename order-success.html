@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | JORA.EDIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        ROOTED IN TRADITION, MADE FOR TODAY.
+    </div>
+
+    <header class="navbar">
+
+    <a href="index.html#home" class="logo">JORA<span>.</span>EDIT</a>
+
+    <nav class="nav-left" id="navLeft">
+        <a href="index.html#home">HOME</a>
+
+        <div class="dropdown">
+            <button
+                type="button"
+                class="dropdown-toggle"
+                id="collectionsToggle"
+                aria-expanded="false">
+                COLLECTIONS
+            </button>
+
+            <div class="dropdown-menu" id="collectionsMenu">
+                <a href="collections.html#shop-all">SHOP ALL</a>
+                <a href="gota-guldasta.html">GOTA GULDASTA</a>
+            </div>
+        </div>
+
+        <a href="index.html#story">OUR STORY</a>
+    </nav>
+
+    <div class="nav-right">
+        <a href="cart.html" class="bag-link">
+            BAG (<span id="bagCount">0</span>)
+        </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        type="button">
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+    <main class="success-page">
+
+        <p>THANK YOU FOR CHOOSING US</p>
+
+        <div class="success-symbol">✓</div>
+
+        <h1>YOUR ORDER IS PLACED.</h1>
+
+        <p class="success-message">
+            Thank you for shopping with JORA.EDIT.
+            We have received your order.
+        </p>
+
+        <p class="order-number">
+            ORDER NUMBER: <span id="orderNumber"></span>
+        </p>
+
+        <a href="collections.html" class="order-button">
+            CONTINUE SHOPPING ↗
+        </a>
+
+        <div class="success-navigation">
+            <a href="index.html">BACK TO HOME</a>
+            <a href="collections.html">EXPLORE COLLECTIONS</a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <h2>JORA.EDIT</h2>
+        <p>For every mood, moment & mehfil.</p>
+
+        <div class="footer-navigation">
+            <a href="index.html">HOME</a>
+            <a href="collections.html">COLLECTIONS</a>
+        </div>
+
+        <p>© 2026 JORA.EDIT</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("orderNumber").textContent =
+            params.get("order") || "Confirmed";
+    </script>
+
+</body>
+</html>

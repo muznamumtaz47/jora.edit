@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANDAAZ | JORA.EDIT</title>
+
+    <meta name="description" content="Discover ANDAAZ, a beautifully coordinated three-piece pure cotton silk ensemble by JORA.EDIT.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="announcement">
+        ROOTED IN TRADITION, MADE FOR TODAY.
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <a href="index.html#home" class="logo">JORA<span>.</span>EDIT</a>
+
+        <nav class="nav-left" id="navLeft">
+            <a href="index.html#home">HOME</a>
+
+            <div class="dropdown">
+                <button
+                    type="button"
+                    class="dropdown-toggle"
+                    id="collectionsToggle"
+                    aria-expanded="false">
+                    COLLECTIONS
+                </button>
+
+                <div class="dropdown-menu" id="collectionsMenu">
+                    <a href="collections.html#shop-all">SHOP ALL</a>
+                    <a href="gota-guldasta.html">GOTA GULDASTA</a>
+                    <a href="aks-e-husn.html">AKS-E-HUSN</a>
+                </div>
+            </div>
+
+            <a href="index.html#story">OUR STORY</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="cart.html" class="bag-link" id="bagLink">
+                BAG (<span id="bagCount">0</span>)
+            </a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            type="button">
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+    <!-- PRODUCT NAVIGATION -->
+    <div class="product-page-navigation">
+        <a href="index.html">← HOME</a>
+        <a href="aks-e-husn.html">AKS-E-HUSN</a>
+    </div>
+
+    <!-- PRODUCT -->
+    <main class="product-page">
+
+        <!-- GALLERY -->
+        <div class="product-gallery">
+
+            <div class="main-image">
+                <img
+                    id="mainProductImage"
+                    src="images/design-03-1.jpeg"
+                    alt="ANDAAZ by JORA.EDIT"
+                    style="display:block; width:100%; height:auto; object-fit:cover;"
+                >
+            </div>
+
+            <div class="product-thumbnails">
+
+                <img src="images/design-03-1.jpeg"
+                    alt="ANDAAZ Full Look"
+                    class="thumbnail active"
+                    onclick="changeImage(this)">
+
+                <img src="images/design-03-2.jpeg"
+                    alt="ANDAAZ Front View"
+                    class="thumbnail"
+                    onclick="changeImage(this)">
+
+                <img src="images/design-03-3.jpeg"
+                    alt="ANDAAZ Back View"
+                    class="thumbnail"
+                    onclick="changeImage(this)">
+
+                <img src="images/design-03-4.jpeg"
+                    alt="ANDAAZ Fabric Details"
+                    class="thumbnail"
+                    onclick="changeImage(this)">
+
+            </div>
+        </div>
+
+        <!-- PRODUCT INFORMATION -->
+        <section class="product-info">
+
+            <p class="product-category">
+                AKS-E-HUSN / ANDAAZ
+            </p>
+
+            <h1>ANDAAZ</h1>
+
+            <p class="product-description">
+                A beautifully coordinated three-piece ensemble
+                crafted in pure cotton silk, featuring a chic
+                short shirt paired with a full plazo and a graceful
+                three-metre organza dupatta. A graceful blend of
+                comfort and elegance, designed for effortless
+                sophistication.
+            </p>
+
+            <div class="product-divider"></div>
+
+            <h3>PRICE</h3>
+
+            <p class="product-price">
+                PKR 9,890
+            </p>
+
+            <h3>FABRIC & DETAILS</h3>
+
+            <ul class="product-features">
+                <li>Pure Cotton Silk</li>
+                <li>Short Shirt</li>
+                <li>Full Plazo</li>
+                <li>3-Metre Organza Dupatta</li>
+                <li>Line Printed</li>
+                <li><strong>Customisable with or without sleeves</strong></li>
+            </ul>
+
+            
+            <!-- SIZE SELECTION -->
+            <h3>AVAILABLE SIZES</h3>
+
+            <div class="size-options">
+                <button type="button">XS</button>
+                <button type="button">S</button>
+                <button type="button">M</button>
+                <button type="button">L</button>
+                <button type="button">XL</button>
+            </div>
+
+            <p id="selectedSize">
+                Please select your size.
+            </p>
+
+            <button
+                type="button"
+                class="size-chart-link"
+                onclick="openSizeChart('andaaz')">
+                VIEW SIZE CHART
+            </button>
+
+            <!-- SLEEVE CUSTOMISATION -->
+            <div class="product-divider"></div>
+
+            <h3>SLEEVE CUSTOMISATION</h3>
+
+            <p class="product-detail-text">
+                Choose your preferred style for ANDAAZ.
+                This outfit can be customised according to your preference.
+            </p>
+
+            <div class="sleeve-options">
+
+                <button
+                    type="button"
+                    data-sleeves="With Sleeves">
+                    WITH SLEEVES
+                </button>
+
+                <button
+                    type="button"
+                    data-sleeves="Without Sleeves">
+                    WITHOUT SLEEVES
+                </button>
+
+            </div>
+
+            <p id="selectedSleeves">
+                Please select your sleeve preference.
+            </p>
+
+            <!-- MODEL DETAILS -->
+            <div class="product-divider"></div>
+
+            <h3>MODEL DETAILS</h3>
+
+            <p class="product-detail-text">
+                Height: 5'0" <br>
+                Wearing Size: XS
+            </p>
+
+            <div class="product-divider"></div>
+
+            <button
+                type="button"
+                id="addToCartButton"
+                class="order-button">
+                ADD TO BAG ↗
+            </button>
+
+            <p class="product-note">
+                For availability and order enquiries,
+                get in touch with JORA.EDIT.
+            </p>
+
+            <p class="product-note">
+                Product colour may vary slightly due to studio
+                lighting, photography, and individual screen settings.
+            </p>
+
+            <a href="aks-e-husn.html" class="back-link">
+                ← BACK TO AKS-E-HUSN
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- SIZE CHART POPUP -->
+    <div class="size-chart-popup" id="sizeChartPopup">
+
+        <div class="size-chart-content">
+
+            <button
+                type="button"
+                class="size-chart-close"
+                onclick="closeSizeChart()">
+                ×
+            </button>
+
+            <img
+                id="sizeChartImage"
+                src=""
+                alt="ANDAAZ Size Chart">
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <h2>JORA.EDIT</h2>
+
+        <p>For every mood, moment & mehfil.</p>
+
+        <div class="footer-navigation">
+            <a href="index.html">HOME</a>
+            <a href="collections.html">COLLECTIONS</a>
+            <a href="cart.html">SHOPPING BAG</a>
+
+            <a href="https://www.instagram.com/jora.edit/"
+                target="_blank"
+                rel="noopener noreferrer">
+                INSTAGRAM
+            </a>
+        </div>
+
+        <p>© 2026 JORA.EDIT</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
