@@ -212,6 +212,47 @@ function calculateCheckout(cart, preference = "50% Advance") {
    ADD TO BAG FUNCTIONALITY
 ========================================= */
 
+function showBagToast() {
+    let toast = document.getElementById("bagToast");
+
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "bagToast";
+        toast.textContent = "ADDED TO BAG ";
+
+        Object.assign(toast.style, {
+            position: "fixed",
+            top: "25px",
+            left: "50%",
+            transform: "translate(-50%, -15px)",
+            background: "#f8f5f0",
+            color: "#4b3b32",
+            padding: "13px 28px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            fontFamily: "DM Sans, sans-serif",
+            border: "1px solid #e5ddd3",
+            zIndex: "99999",
+            opacity: "0",
+            transition: "opacity 0.3s ease, transform 0.3s ease",
+            pointerEvents: "none"
+        });
+
+        document.body.appendChild(toast);
+    }
+
+    toast.style.opacity = "1";
+    toast.style.transform = "translate(-50%, 0)";
+
+    clearTimeout(window.bagToastTimer);
+
+    window.bagToastTimer = setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translate(-50%, -15px)";
+    }, 2000);
+}
+
+
 const addToCartButton = document.getElementById("addToCartButton");
 
 if (addToCartButton) {
@@ -291,10 +332,9 @@ if (addToCartButton) {
 
         saveJoraCart(cart);
 
-        alert("Your outfit has been added to your bag!");
+        showBagToast();
     });
 }
-
 
 
 /* =========================================
